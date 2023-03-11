@@ -24,6 +24,15 @@ function saveData() {
 function showData() {
     const dataLocalStorage = JSON.parse(localStorage.getItem("dattuyy")) || [];
     const ul = document.createElement("ul")
+    const getHTMLIDlistvuanhap = document.getElementsByTagName("ul");
+    // get thẻ ul
+    if(getHTMLIDlistvuanhap.length > 0){
+        // nếu có ul thì thực hiện xóa  (có ul thì length > 0)
+        getHTMLIDlistvuanhap[0].remove();
+        // xóa ul đầu tiên
+    }
+
+
     // tao thẻ html ul
     for (let i = 0; i < dataLocalStorage.length; i++) {
         const li = document.createElement("li")
@@ -52,6 +61,10 @@ function xoaData(i){
    // // filter gồm tiem là object = { names , birtday} 
    // index là vị trí của object
    const ul = document.createElement("ul")
+    const getHTMLIDlistvuanhap = document.getElementsByTagName("ul");
+    if(getHTMLIDlistvuanhap.length > 0){
+        getHTMLIDlistvuanhap[0].remove();
+    }
    for (let i = 0; i < deleteDataI.length; i++) {
     const li = document.createElement("li")
     // tao thẻ html li
