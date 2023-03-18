@@ -29,6 +29,7 @@ function showData() {
     if(getHTMLIDlistvuanhap.length > 0){
         // nếu có ul thì thực hiện xóa  (có ul thì length > 0)
         getHTMLIDlistvuanhap[0].remove();
+        // thì phải có document.getID , TagName ,Class thi phai hmtl 
         // xóa ul đầu tiên
     }
 
